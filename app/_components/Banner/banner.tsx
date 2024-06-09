@@ -33,7 +33,7 @@ function Banner() {
                                              </span>
                                         <span style={{ width: '2px', height: '50px' }} className='border  border-secondary animate__animated animate__flash animate__infinite	'></span> </h1>
                                     <p className='text-secondary  fs-6 text-start p-1  lh-sm fw-bold'>
-                                        I'm Ahmed Ahmed Abusetta undergradauted student in facaulty of engineering computers and control department in Tanta university , and i'm a front end devolper with 
+                                        I am Ahmed Ahmed Abusetta undergradauted student in facaulty of engineering computers and control department in Tanta university , and i'm a front end devolper with 
                                         <span className='underline text-indigo-500'> {"{"} React {"}"}  </span>framework
                                         </p>
                                     <button className='btn connect-btn text-light fw-bold fs-5 me-auto' style={{ width: 'fit-content' }}>lets connect <ArrowRightCircleIcon id='arrow-btn' /></button>

@@ -100,7 +100,7 @@ const Header = () => {
                   scrolled ? "fs-6" : "fs-5"
                 } text-light`}
               >
-                let's connect
+                let`&apos;`s connect
               </button>
             </ul>
           </ul>
