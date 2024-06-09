@@ -1,0 +1,24 @@
+input::placeholder{
+    color: #fff;
+}
+input{
+    color: #fff;
+    padding: .5rem;
+    backdrop-filter: blur(10px) !important;
+    background-color:#afc6da59 !important;
+    border-radius:15px ;
+    border: solid 1px white !important;
+}
+input:focus{
+    outline: none;
+    color: white !important;
+    background-color: #ffffff44 !important;
+}
+input:focus::placeholder{
+    color: #ffffff8c !important;
+}
+#coonect {
+    text-transform: capitalize;
+    background: linear-gradient( to right, rgba(255, 0, 215, 0.9), rgba(94, 0, 255, 0.88) ) !important;;
+    padding-bottom: 180px !important;
+}

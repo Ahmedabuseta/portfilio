@@ -1,0 +1,22 @@
+
+#tab1{
+    /* background: linear-gradient( to right,#973489,#5f30ae ) ; */
+    border-radius: 50px 0 0 50px;
+}
+#tab3{
+    /* background: linear-gradient( to right,#973489,#5f30ae ) ; */
+    border-radius:0 50px  50px 0;
+}
+.overlay{
+    opacity: 0;
+    height: 0;
+    /* border-radius: 15px !important; */
+    color: #fff;
+    cursor: pointer;
+}
+.project:hover .overlay{
+    height: 100% !important;
+    transition: .4s !important;
+    opacity: .8 !important;
+    background-color: #5f30ae !important;
+}
