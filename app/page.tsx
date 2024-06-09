@@ -11,15 +11,18 @@ export default function Home() {
     <main className="bg-black">
       <Header/>
       <Banner/>
+      
       <div id='skills' className='container bg-dark text-center p-3 text-light' style={{ transform: 'translateY(-50px)', borderRadius: '30px' }}>
       <h1 className='text-center text-light'>Skills</h1>
       <p className='text-center text-light d-flex justify-content-center' style={{ paddingLeft: '5rem', paddingRight: '5rem' }}>{'my Name is Ahmed Abuseta, I live in tanta. Front-end {react} dev.'}</p>
       
         <SkillCarousel />
+        
         </div>
       <MakeTabs />
       <Connect/>
       <Footer/>
+      
     </main>
   );
 }

@@ -1,7 +1,7 @@
+'use client'
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import azan from "../../assets/img/azan.jpg"; // Import your local image
 
 const ParticleBg = () => {
   const [init, setInit] = useState(false);
@@ -14,15 +14,15 @@ const ParticleBg = () => {
     });
   }, []);
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
+  // const particlesLoaded = (container:any) => {
+  //   console.log(container);
+  // };
 
   if (init) {
     return (
       <Particles
         id="tsparticles"
-        particlesLoaded={particlesLoaded}
+        // particlesLoaded={particlesLoaded}
         options={{
           "autoPlay": true,
           "background": {
@@ -30,7 +30,7 @@ const ParticleBg = () => {
               "value": "#000000"
             },
             "image": "",
-            "position": "",
+            "position": "-1",
             "repeat": "",
             "size": "",
             "opacity": 1
@@ -50,7 +50,7 @@ const ParticleBg = () => {
           "delay": 0,
           "fullScreen": {
             "enable": true,
-            "zIndex": -1
+            "zIndex": -12
           },
           "detectRetina": true,
           "duration": 0,
@@ -373,7 +373,7 @@ const ParticleBg = () => {
               "width": 0
             },
             "zIndex": {
-              "value": 0,
+              "value": -20,
               "opacityRate": 1,
               "sizeRate": 1,
               "velocityRate": 1
