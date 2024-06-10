@@ -27,7 +27,7 @@ export default function Projects({ projects }: { projects: IProject[] }) {
         {projects.map((project: IProject) => (
           <div
             key={project.id} // Add a unique key for each project
-            className="col-xs-12 col-md-5 col-lg-3 position-relative project"
+            className="col-xs-12 col-md-5 col-lg-3  position-relative project"
           >
             <div className="rounded" style={{ height: "300px" }}>
               <Image src={project.imgUrl} className="w-100 h-100 rounded flex-grow-1" alt="img" />

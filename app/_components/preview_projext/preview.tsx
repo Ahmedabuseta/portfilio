@@ -2,6 +2,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, } from 'react'
 import { IProject } from '../projects/data';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 interface IProps {
   isOpen: boolean,
@@ -55,29 +56,14 @@ export default function PreviewModel({ isOpen, setIsOpen, previewProject } : IPr
                       {/* <Image src={previewProject!.previewImgSrc} className='rounded-lg max-h-52 w-100' alt='preview img for website' /> */}
                     </div>
                     <div>
-                      <p className='text-lg font-medium'> <span className='text-red-500'>*</span>live :
-                        <a className=' text-sky-600 ps-2' href={previewProject?.liveLink} target="_blank" rel="noreferrer"> press here</a>
-                      </p>
-                      <p className='text-lg font-medium'><span className='text-red-500'>*</span>repo :
-                        <a className=' text-sky-600 ps-2' href={previewProject?.repoLink} target="_blank" rel="noreferrer"> press here</a>
-                      </p>
-                      <div>
-                        <h3 className='text-indigo-500 uppercase font-medium'>
-                          project features :
-                        </h3>
-                        <h5 className='ps-2 font-medium'>Admin Features:</h5>
-                        <ul className='text-stone-200 ' style={{ listStyle: 'square' }}>
-                          <li>Add courses.</li>
-                          <li>Add job offers.</li>
-                        </ul>
-                        <h5 className='ps-2 font-medium'>Admin Features:</h5>
-                        <ul className='text-stone-200 ' style={{ listStyle: 'square' }}>
-                          <li>Login with data from the admin.</li>
-                          <li>Access articles (for all visitors).</li>
-                        </ul>
-
-
-                      </div>
+                      
+                      <Button className='bg-gradient-to-r from-indigo-500 to-purple-500 ms-2 mb-2'>
+                        <a href={previewProject?.liveLink}  className='text-white ' target="_blank" rel="noreferrer">live</a>
+                      </Button>
+                      <Button className='bg-gradient-to-r from-indigo-500 to-purple-500 ms-2 mb-2'>
+                        <a href={previewProject?.repoLink} className='text-white '  target="_blank" rel="noreferrer">repo</a>
+                      </Button>
+                     
                     </div>
                   </div>
                   <div className="mt-4">
@@ -86,7 +72,7 @@ export default function PreviewModel({ isOpen, setIsOpen, previewProject } : IPr
                       className="inline-flex justify-center rounded-md border border-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={closeModal}
                     >
-                      Ok, thanks!
+                      Ok, close!
                     </button>
                   </div>
                 </Dialog.Panel>

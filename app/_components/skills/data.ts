@@ -7,10 +7,17 @@ import bootsrap from '@/public/bootstrap.png'
 import css from '@/public/cascading-style-sheets.png'
 import react from '@/public/physics.png'
 import git from '@/public/commit-git.png'
-export const Data = [
+import { StaticImageData } from 'next/image';
+
+interface ISkill {
+  src: StaticImageData;
+  title: string;
+
+}
+export const Data  : ISkill[]= [
   {
     src: skill_90,
-    title: 'Js'
+    title: 'JS & TS'
   },
   {
     src: skill_90,
@@ -18,34 +25,33 @@ export const Data = [
   },
   {
     src: skill_95,
-    title: 'Css'
-  },
-  {
-    src: skill_90,
     title: 'Bootstrap & TailwindCss'
   },
   {
-    src: skill_80,
-    title: 'MUI'
+    src: skill_90,
+    title: 'git'
   },
   {
     src: skill_90,
-    title: 'git & github'
-  },
-  {
-    src: skill_90,
-    title: 'toolkit'
+    title: 'Next JS'
   },
   {
     src: skill_80,
-    title: 'TS'
+    title: 'Node js'
   },
   {
     src: skill_80,
-    title: 'Sass'
+    title: 'Nest js'
+  },{
+    src: skill_80,
+    title: 'Prisma & typeOrm'
   },
   {
-    src: skill_90,
+    src: skill_80,
+    title: 'python'
+  },
+  {
+    src: skill_95,
     title: 'React'
   },
 ]
