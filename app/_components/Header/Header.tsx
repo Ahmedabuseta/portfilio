@@ -16,7 +16,7 @@ import "./header.css";
 const Header = () => {
   const [activLink, setActiveLink] = useState<string>("home");
   const [scrolled, setScrolled] = useState<boolean>(false);
-  const [toggle, setToggle] = useState<boolean>(false);
+  const [toggle, setToggle] = useState<boolean>(true);
 
   useEffect(() => {
     const onScroll = () => {
@@ -39,8 +39,8 @@ const Header = () => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top ${
-        (scrolled || toggle) ? "p-1 bg-dark" : "p-4"
+      className={` navbar navbar-expand-lg fixed-top ${
+        (scrolled || toggle) ? "p-1 backdrop-blur-lg" : "p-4"
       } fs-5 d-flex`}
       id="navBar"
     >
@@ -62,10 +62,10 @@ const Header = () => {
           <MenuIcon />
         </button>
         <div
-          className={toggle ? "visable block w-full " : "hidden"}
+          className={`${toggle ? "visable block w-full " : " hidden lg:block w-full"}`}
           id="navbarSupportedContent"
         >
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 flex  gap-3 align-items-center">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 flex  justify-end gap-3 align-items-center">
             <NavText
               path="#"
               activLink={activLink}
@@ -92,15 +92,15 @@ const Header = () => {
                 path={"https://www.linkedin.com/in/ahmed-abu-seta-67436a21b/"}
                 icon={faLinkedin}
               />
-              <NavIcon path={"#"} icon={faXTwitter} />
-              <NavIcon path={"#"} icon={faGithub} />
+              <NavIcon path={"https://x.com/amd_ab6"} icon={faXTwitter} />
+              <NavIcon path={"https://github.com/Ahmedabuseta"} icon={faGithub} />
               <button
                 id="connect-btn"
                 className={`position-relative border border-light p-4 pt-3 pb-3 fw-bold ${
                   scrolled ? "fs-6" : "fs-5"
                 } text-light`}
               >
-                let`&apos;`s connect
+                let&apos;s connect
               </button>
             </ul>
           </ul>

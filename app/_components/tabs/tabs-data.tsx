@@ -7,11 +7,12 @@ export interface ITabs {
 }
 
 import { IProject } from "../projects/data"; // Import the IProject type
+import { TimelineComponent } from "@/components/timeline";
 
 const Tabos: ITabs[] = [
   {
-    value: "expience",
-    content: <Projects projects={data} />,
+    value: "journey",
+    content:<TimelineComponent /> ,
   },
   {
     value: "Projects",

@@ -1,6 +1,9 @@
+
+@import "keep-react/css";
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
+  
 
   @layer base {
     :root {
@@ -73,4 +76,45 @@
     body {
       @apply bg-background text-foreground;
     }
+  }
+  .particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Adjust this value as needed */
+  }
+  /* main{
+    background: rgb(203,140,241);
+    background: -moz-radial-gradient(circle, rgba(203,140,241,1) 0%, rgba(5,0,8,1) 21%);
+    background: -webkit-radial-gradient(circle, rgba(203,140,241,1) 0%, rgba(5,0,8,1) 21%);
+    background: radial-gradient(circle, rgba(203,140,241,1) 0%, rgba(5,0,8,1) 21%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cb8cf1",endColorstr="#050008",GradientType=1); 
+  } */
+   main{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+   }
+  main:before {
+    background: rgb(52,18,126);
+    background: -moz-radial-gradient(circle, rgba(52,18,126,1) 13%, rgba(6,0,2,1) 50%);
+    background: -webkit-radial-gradient(circle, rgba(52,18,126,1) 13%, rgba(6,0,2,1) 50%);
+    background: radial-gradient(circle, rgba(52,18,126,1) 13%, rgba(6,0,2,1) 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#34127e",endColorstr="#060002",GradientType=1); 
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    content: "";
+    position: fixed;
+    top: -5;
+    left: -5;
+    filter:blur(4px);
+    z-index: -1;
   }

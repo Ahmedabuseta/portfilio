@@ -1,12 +1,12 @@
 import skill_95 from '@/public/meter1.png';
 import skill_80 from '@/public/meter2.png';
 import skill_90 from '@/public/meter3.png';
-import js from '@/public/js.png'
-import ts from '@/public/ts.png'
-import bootsrap from '@/public/bootstrap.png'
-import css from '@/public/cascading-style-sheets.png'
-import react from '@/public/physics.png'
-import git from '@/public/commit-git.png'
+// import js from '@/public/js.png'
+// import ts from '@/public/ts.png'
+// import bootsrap from '@/public/bootstrap.png'
+// import css from '@/public/cascading-style-sheets.png'
+// import react from '@/public/physics.png'
+// import git from '@/public/commit-git.png'
 import { StaticImageData } from 'next/image';
 
 interface ISkill {
@@ -55,6 +55,6 @@ export const Data  : ISkill[]= [
     title: 'React'
   },
 ]
-export const tools = [
-  js, ts, bootsrap, git, react, css
-]
+// export const tools = [
+//   js, ts, bootsrap, git, react, css
+// ]

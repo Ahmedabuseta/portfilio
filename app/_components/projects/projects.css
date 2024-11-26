@@ -17,6 +17,6 @@
 .project:hover .overlay{
     height: 100% !important;
     transition: .4s !important;
-    opacity: .8 !important;
+    opacity: .65 !important;
     background-color: #5f30ae !important;
 }
