@@ -69,7 +69,7 @@ export const TimelineComponent = () => {
   return (
     <div className="flex flex-col items-center justify-center p-3">
       {data.map((timeLine, index) => (
-        <div className={`relative p-4  ${index % 2 !== 0 ? 'border-l-2 md:border-r-2 md:border-l-0  md:-translate-x-[368px]' : 'border-l-2'} md:-mr-[300px] w-[370px] border-indigo-600`}>
+        <div key={index} className={`relative p-4  ${index % 2 !== 0 ? 'border-l-2 md:border-r-2 md:border-l-0  md:-translate-x-[368px]' : 'border-l-2'} md:-mr-[300px] w-[370px] border-indigo-600`}>
           <div className={`absolute - ${index % 2 !== 0 ? '-left-[13px] md:left-[calc(100%-12px)] ' : '-left-[13px]'} w-6 h-6 rounded-full bg-blue-600`} />
           <p className="text-body-5 font-normal leading-[1.4] text-indigo-400 dark:text-metal-300">
             {timeLine.date}
