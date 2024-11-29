@@ -66,28 +66,44 @@ export const TimelineComponent = () => {
       image: reactNative,
     },
   ];
-  return (
-    <div className="flex flex-col items-center justify-center p-3">
-      {data.map((timeLine, index) => (
-        <div key={index} className={`relative p-4  ${index % 2 !== 0 ? 'border-l-2 md:border-r-2 md:border-l-0  md:-translate-x-[368px]' : 'border-l-2'} md:-mr-[300px] w-[370px] border-indigo-600`}>
-          <div className={`absolute - ${index % 2 !== 0 ? '-left-[13px] md:left-[calc(100%-12px)] ' : '-left-[13px]'} w-6 h-6 rounded-full bg-blue-600`} />
-          <p className="text-body-5 font-normal leading-[1.4] text-indigo-400 dark:text-metal-300">
-            {timeLine.date}
-          </p>
-          <h1 className="text-body-1 font-medium text-white dark:text-white">
-            {timeLine.title}
-          </h1>
-          <p className="text-body-4 font-normal text-metal-300">
-            {timeLine.description}
-          </p>
-          <Image
-            src={timeLine.image}
-            className="!mt-4 block rounded-xl"
-            alt="item1"
-            width={300}
-          />
-        </div>
-      ))}
-    </div>
-  );
+return (
+  <div className="flex flex-col items-center justify-center p-3">
+    {data.map((timeline, index) => (
+      <div
+        key={index} // Ensure key is applied to the parent element of the iteration.
+        className={`relative p-4 ${
+          index % 2 !== 0
+            ? "border-l-2 md:border-r-2 md:border-l-0 md:translate-x-[-368px]"
+            : "border-l-2"
+        } md:mr-[-300px] w-[370px] border-indigo-600`}
+      >
+        <div
+          className={`absolute ${
+            index % 2 !== 0
+              ? "left-[calc(100%-12px)]"
+              : "-left-[13px]"
+          } w-6 h-6 rounded-full bg-blue-600`}
+        />
+        <p className="text-sm font-normal text-indigo-400">
+          {timeline.date}
+        </p>
+        <h1 className="text-lg font-medium text-white">
+          {timeline.title}
+        </h1>
+        <p className="text-sm font-normal text-gray-300">
+          {timeline.description}
+        </p>
+        <Image
+          src={timeline.image}
+          key={`${index}-image`} // Add a unique key for Image if required by any nested component.
+          className="mt-4 rounded-xl"
+          alt={timeline.title}
+          width={300}
+          height={200}
+        />
+      </div>
+    ))}
+  </div>
+);
+
 };
