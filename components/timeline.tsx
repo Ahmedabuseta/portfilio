@@ -17,7 +17,7 @@ export interface ITimelLine {
   image: StaticImageData | string;
 }
 
-export const TimelineComponent = () => {
+export const TimelineComponent = (data:ITimelLine[]) => {
  
 return (
   <div className="flex flex-col items-center justify-center p-3">
