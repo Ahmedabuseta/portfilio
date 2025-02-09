@@ -17,7 +17,7 @@ export interface ITimelLine {
   image: StaticImageData | string;
 }
 
-export const TimelineComponent = (data:ITimelLine[]) => {
+export const TimelineComponent = () => {
   const data: ITimelLine[] = [
     {
       date: "june,2019 to nov,2019",
