@@ -30,7 +30,7 @@ import Image from 'next/image'
 
 
 
-export const ToolsComp = () => {
+export const ToolsComp = ({ tools: string[] | undefined; }) => {
    const Tools = [
     {
       id: 1,
