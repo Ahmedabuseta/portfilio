@@ -70,7 +70,7 @@ return (
   <div className="flex flex-col items-center justify-center p-3">
     {data.map((timeline, index) => (
       <div
-        key={index} // Ensure key is applied to the parent element of the iteration.
+        key={timeline.date} // Ensure key is applied to the parent element of the iteration.
         className={`relative p-4 ${
           index % 2 !== 0
             ? "border-l-2 md:border-r-2 md:border-l-0 md:translate-x-[-368px]"
